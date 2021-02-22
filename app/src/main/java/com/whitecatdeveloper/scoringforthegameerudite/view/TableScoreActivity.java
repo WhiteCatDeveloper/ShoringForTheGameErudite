@@ -115,5 +115,4 @@ public class TableScoreActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
 }

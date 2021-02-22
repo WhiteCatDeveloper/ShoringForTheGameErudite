@@ -142,9 +142,8 @@ public class Game {
     }
 
 
-    
     public String winner() {
-        String result;
+        String result =  "Никто не";
         if (beastScore() == shorePlayer1) {
             result = playerName1;
         } else if (beastScore() == shorePlayer2) {
@@ -153,8 +152,6 @@ public class Game {
             result = playerName3;
         } else if (beastScore() == shorePlayer4) {
             result = playerName4;
-        } else {
-            result = "Никто не";
         }
         return result;
     }

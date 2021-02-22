@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Scoring for the game erudite</string>
     <string name="button_to_start">Начать</string>
+    <string name="button_settings">Настройки</string>
+    <string name="entry_players_name">Введите имена игроков:</string>
+    <string name="hint_player1">Игрок 1</string>
+    <string name="hint_player2">Игрок 2</string>
+    <string name="hint_player3">Игрок 3</string>
+    <string name="hint_player4">Игрок 4</string>
+    <string name="start_game">Начать игру</string>
+    <string name="add_player">Добавить игрока</string>
+    <string name="remove_player">Удалить игрока</string>
 
     <string-array name="select_multipliers">
         <item>X1</item>
