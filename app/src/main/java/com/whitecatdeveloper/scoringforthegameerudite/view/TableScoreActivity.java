@@ -55,8 +55,7 @@ public class TableScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 game.endGame();
-                Intent intent = new Intent(TableScoreActivity.this, MenuActivity.class);
-                startActivity(intent);
+                scowWinner();
             }
         });
         dialog.setNegativeButton("НЕТ", new DialogInterface.OnClickListener() {
@@ -101,4 +100,20 @@ public class TableScoreActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void scowWinner() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle(game.winner() + " ПОБЕДИТЕЛЬ");
+        dialog.setMessage("Набрано " + game.beastScore() + " очков.");
+        dialog.setPositiveButton("В меню", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent intent = new Intent(TableScoreActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+        dialog.show();
+    }
+
+
 }

@@ -2,6 +2,8 @@ package com.whitecatdeveloper.scoringforthegameerudite.model;
 
 
 public class Game {
+    // Нужно подумать о том чтобы игрока вынести в отдельный класс
+
     private String playerName1;
     private String playerName2;
     private String playerName3;
@@ -137,5 +139,33 @@ public class Game {
         shorePlayer3 = 0;
         shorePlayer4 = 0;
         playerTurn = 1;
+    }
+
+
+    
+    public String winner() {
+        String result;
+        if (beastScore() == shorePlayer1) {
+            result = playerName1;
+        } else if (beastScore() == shorePlayer2) {
+            result = playerName2;
+        } else if (beastScore() == shorePlayer3) {
+            result = playerName3;
+        } else if (beastScore() == shorePlayer4) {
+            result = playerName4;
+        } else {
+            result = "Никто не";
+        }
+        return result;
+    }
+
+
+    public int beastScore () {
+        int beastScore = 0;
+        if (getShorePlayer1() > beastScore) beastScore = getShorePlayer1();
+        if (getShorePlayer2() > beastScore) beastScore = getShorePlayer2();
+        if (getShorePlayer3() > beastScore) beastScore = getShorePlayer3();
+        if (getShorePlayer4() > beastScore) beastScore = getShorePlayer4();
+        return beastScore;
     }
 }
