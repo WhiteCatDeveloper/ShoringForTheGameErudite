@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Scoring for the game erudite</string>
+    <string name="button_to_start">Начать</string>
+
+    <string-array name="select_multipliers">
+        <item>X1</item>
+        <item>X2</item>
+        <item>X3</item>
+    </string-array>
+</resources>

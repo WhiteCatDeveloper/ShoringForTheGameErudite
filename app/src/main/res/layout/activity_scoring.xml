@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    tools:context=".view.ScoringActivity">
+
+    <TextView
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ход игрока:"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextWordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:hint="Введите слово"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName" />
+
+    <Button
+        android:id="@+id/buttonSelectMultipliers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSelectMultipliers"
+        android:text=" Выбрать множители "
+        android:background="@color/colorYellow"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWordInput" />
+
+    <TextView
+        android:id="@+id/textViewSelectMultipliersWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Множитель слова: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSelectMultipliers" />
+
+    <Spinner
+        android:id="@+id/spinnerSelectMultipliersWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:entries="@array/select_multipliers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSelectMultipliers" />
+
+    <TextView
+        android:id="@+id/textViewSelectMultipliersLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Множитель букв: "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectMultipliersWord" />
+
+    <Spinner
+        android:id="@+id/spinnerSelectMultipliersLetter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/select_multipliers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLetter1" />
+
+    <Spinner
+        android:id="@+id/spinnerSelectMultipliersLetter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/select_multipliers"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerSelectMultipliersLetter3"
+        app:layout_constraintStart_toEndOf="@+id/spinnerSelectMultipliersLetter1"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLetter2" />
+
+    <Spinner
+        android:id="@+id/spinnerSelectMultipliersLetter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:entries="@array/select_multipliers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLetter3" />
+
+    <TextView
+        android:id="@+id/textViewPrintScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="0"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSaveScore" />
+
+    <Button
+        android:id="@+id/buttonSaveScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:onClick="onClickSaveScore"
+        android:text=" Сохранить "
+        android:background="@color/colorYellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSelectMultipliersLetter3" />
+
+    <Spinner
+        android:id="@+id/spinnerLetter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectMultipliersLetter" />
+
+    <Spinner
+        android:id="@+id/spinnerLetter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerLetter3"
+        app:layout_constraintStart_toEndOf="@+id/spinnerLetter1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectMultipliersLetter" />
+
+    <Spinner
+        android:id="@+id/spinnerLetter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectMultipliersLetter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
