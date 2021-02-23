@@ -1,6 +1,8 @@
 package com.whitecatdeveloper.scoringforthegameerudite.model;
 
 
+import android.util.Log;
+
 public class Game {
     // Нужно подумать о том чтобы игрока вынести в отдельный класс
 
@@ -16,6 +18,7 @@ public class Game {
 
     private int countPlayers;
     private int playerTurn = 1;
+
 
     private static Game gameInstance;
 
@@ -144,25 +147,26 @@ public class Game {
 
     public String winner() {
         String result =  "Никто не";
-        if (beastScore() == shorePlayer1) {
+        int beastScore = beastScore();
+        if (beastScore == shorePlayer1) {
             result = playerName1;
-        } else if (beastScore() == shorePlayer2) {
+        } else if (beastScore == shorePlayer2) {
             result = playerName2;
-        } else if (beastScore() == shorePlayer3) {
+        } else if (beastScore == shorePlayer3) {
             result = playerName3;
-        } else if (beastScore() == shorePlayer4) {
+        } else if (beastScore == shorePlayer4) {
             result = playerName4;
         }
         return result;
     }
 
-
-    public int beastScore () {
+    public int beastScore() {
         int beastScore = 0;
-        if (getShorePlayer1() > beastScore) beastScore = getShorePlayer1();
-        if (getShorePlayer2() > beastScore) beastScore = getShorePlayer2();
-        if (getShorePlayer3() > beastScore) beastScore = getShorePlayer3();
-        if (getShorePlayer4() > beastScore) beastScore = getShorePlayer4();
+        if (shorePlayer1 > beastScore) beastScore = shorePlayer1;
+        if (shorePlayer2 > beastScore) beastScore = shorePlayer2;
+        if (shorePlayer3 > beastScore) beastScore = shorePlayer3;
+        if (shorePlayer4 > beastScore) beastScore = shorePlayer4;
         return beastScore;
     }
+
 }

@@ -54,7 +54,6 @@ public class TableScoreActivity extends AppCompatActivity {
         dialog.setPositiveButton("ДА", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                game.endGame();
                 scowWinner();
             }
         });
@@ -108,6 +107,7 @@ public class TableScoreActivity extends AppCompatActivity {
         dialog.setPositiveButton("В меню", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                game.endGame();
                 Intent intent = new Intent(TableScoreActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
