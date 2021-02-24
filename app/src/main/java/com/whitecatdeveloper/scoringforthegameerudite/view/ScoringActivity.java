@@ -73,7 +73,7 @@ public class ScoringActivity extends AppCompatActivity {
     }
 
     private void inputWord () {
-        word = wordInput.getText().toString();
+        word = wordInput.getText().toString().toLowerCase();
         if (countScore.isCorrect(word.toCharArray())) {
             fillOfTheListWord();
             adapter.notifyDataSetChanged();

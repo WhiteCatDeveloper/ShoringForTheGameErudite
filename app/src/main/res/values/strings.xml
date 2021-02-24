@@ -10,6 +10,16 @@
     <string name="start_game">Начать игру</string>
     <string name="add_player">Добавить игрока</string>
     <string name="remove_player">Удалить игрока</string>
+    <string name="player_turn">Ход игрока:</string>
+    <string name="entry_word">Введите слово</string>
+    <string name="select_multipliers">Выбрать множители</string>
+    <string name="multipliers_word">Множитель слова:</string>
+    <string name="multiplier_letter">Множитель букв:</string>
+    <string name="_0">0</string>
+    <string name="save">Сохранить</string>
+    <string name="current_result">Текущие результаты:</string>
+    <string name="next_turn">Следующий ход</string>
+    <string name="to_end_game">Завершить игру</string>
 
     <string-array name="select_multipliers">
         <item>X1</item>
