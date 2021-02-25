@@ -1,7 +1,6 @@
 package com.whitecatdeveloper.scoringforthegameerudite.model;
 
 
-import android.util.Log;
 
 public class Game {
     // Нужно подумать о том чтобы игрока вынести в отдельный класс
