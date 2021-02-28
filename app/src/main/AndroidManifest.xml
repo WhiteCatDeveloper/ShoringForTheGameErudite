@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.StartScreenActivity" />
+        <activity android:name=".view.MenuActivity" />
         <activity android:name=".view.TableScoreActivity" />
         <activity android:name=".view.EntryNameActivity" />
         <activity android:name=".view.SettingsActivity" />
         <activity android:name=".view.ScoringActivity" />
-        <activity android:name=".view.MenuActivity">
+        <activity android:name=".view.StartScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

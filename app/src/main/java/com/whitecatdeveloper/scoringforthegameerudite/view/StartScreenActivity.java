@@ -14,14 +14,14 @@ public class StartScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
         initDataBase();
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Intent intent = new Intent(this, MenuActivity.class);
-//        startActivity(intent);
+        next();
+
     }
 
     private void initDataBase () {}
+
+    private void next () {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
 }
