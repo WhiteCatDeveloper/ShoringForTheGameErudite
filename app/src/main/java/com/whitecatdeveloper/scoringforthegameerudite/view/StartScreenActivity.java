@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.whitecatdeveloper.scoringforthegameerudite.R;
+import com.whitecatdeveloper.scoringforthegameerudite.model.Settings;
 
 public class StartScreenActivity extends AppCompatActivity {
+    private Settings settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +20,14 @@ public class StartScreenActivity extends AppCompatActivity {
 
     }
 
-    private void initDataBase () {}
+    private void initDataBase () {
+
+    }
 
     private void next () {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
+
+
 }

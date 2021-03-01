@@ -1,7 +1,9 @@
 package com.whitecatdeveloper.scoringforthegameerudite.model;
 
+
 public class Settings {
     private Language language;
+
 
     private static Settings instance;
 
