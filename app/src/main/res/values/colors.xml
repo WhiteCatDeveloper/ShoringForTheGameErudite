@@ -3,4 +3,8 @@
     <color name="colorGreen">#1DCC1D</color>
     <color name="colorYellow">#FFFF24</color>
     <color name="colorRed">#FF0000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorOrange">#FF9900</color>
+    <color name="colorBlue">#4F4FD9</color>
 </resources>
