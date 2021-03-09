@@ -31,11 +31,70 @@
             android:text="Цвет фона:"
             android:textSize="24sp"/>
 
-        <Spinner
-            android:id="@+id/spinnerSelectBackgroundColors"
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent" >
 
-            />
+            <RadioButton
+                android:id="@+id/radioButtonBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:text="ЧЕРНЫЙ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:text="БЕЛЫЙ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonYellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorYellow"
+                android:text="ЖЕЛТЫЙ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrange"
+                android:text="ОРАНЖЕВЫЙ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreen"
+                android:text="ЗЕЛЕНЫЙ" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlue"
+                android:text="СИНИЙ" />
+
+            <Button
+                android:id="@+id/buttonSaveSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorYellow"
+                android:onClick="onClickSaveSettings"
+                android:text="СОХРАНИТЬ" />
+
+            <Button
+                android:id="@+id/buttonToMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorRed"
+                android:onClick="onClickToMain"
+                android:text="В МЕНЮ" />
+        </RadioGroup>
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
