@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 
 import com.whitecatdeveloper.scoringforthegameerudite.R;
+import com.whitecatdeveloper.scoringforthegameerudite.model.Language;
 import com.whitecatdeveloper.scoringforthegameerudite.model.MyBackgroundColors;
 import com.whitecatdeveloper.scoringforthegameerudite.model.Settings;
 
@@ -36,10 +37,11 @@ public class SettingsActivity extends AppCompatActivity {
         radioButtonOrange = findViewById(R.id.radioButtonOrange);
         radioButtonGreen = findViewById(R.id.radioButtonGreen);
         radioButtonBlue = findViewById(R.id.radioButtonBlue);
-        setRadioButtonColor();
+        getRadioButtonColor();
+        getLanguage();
     }
 
-    private void setRadioButtonColor () {
+    private void getRadioButtonColor() {
         MyBackgroundColors colors = settings.getColors();
         switch (colors) {
             case BLACK: radioButtonBlack.setChecked(true);
@@ -56,6 +58,11 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    private void getLanguage () {
+        if (settings.getLanguage() == Language.CYRILLIC) {
+            switchLanguage.setChecked(true);
+        } else switchLanguage.setChecked(false);
+    }
 
     public void onClickSaveSettings(View view) {
         saveSettings();
@@ -74,4 +81,6 @@ public class SettingsActivity extends AppCompatActivity {
     private void saveSettings () {
 
     }
+
+
 }
