@@ -17,19 +17,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/use_alphabet"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
         <Switch
             android:id="@+id/switchLanguage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Использовать алфавит: киррилица"
+            android:text="@string/alphabet_cyrillic"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Цвет фона:"
-            android:textSize="24sp"/>
+            android:text="@string/set_color_background"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -41,42 +52,42 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorBlack"
                 android:textColor="@color/colorWhite"
-                android:text="ЧЕРНЫЙ" />
+                android:text="@string/BLACK" />
 
             <RadioButton
                 android:id="@+id/radioButtonWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:text="БЕЛЫЙ" />
+                android:text="@string/WHITE" />
 
             <RadioButton
                 android:id="@+id/radioButtonYellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorYellow"
-                android:text="ЖЕЛТЫЙ" />
+                android:text="@string/YELLOW" />
 
             <RadioButton
                 android:id="@+id/radioButtonOrange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorOrange"
-                android:text="ОРАНЖЕВЫЙ" />
+                android:text="@string/ORANGE" />
 
             <RadioButton
                 android:id="@+id/radioButtonGreen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorGreen"
-                android:text="ЗЕЛЕНЫЙ" />
+                android:text="@string/GREEN" />
 
             <RadioButton
                 android:id="@+id/radioButtonBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorBlue"
-                android:text="СИНИЙ" />
+                android:text="@string/BLUE" />
 
             <Button
                 android:id="@+id/buttonSaveSettings"
@@ -84,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorYellow"
                 android:onClick="onClickSaveSettings"
-                android:text="СОХРАНИТЬ" />
+                android:text="@string/button_save" />
 
             <Button
                 android:id="@+id/buttonToMain"
@@ -92,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorRed"
                 android:onClick="onClickToMain"
-                android:text="В МЕНЮ" />
+                android:text="@string/button_to_menu" />
         </RadioGroup>
 
 

@@ -59,9 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void getLanguage () {
-        if (settings.getLanguage() == Language.CYRILLIC) {
-            switchLanguage.setChecked(true);
-        } else switchLanguage.setChecked(false);
+        switchLanguage.setChecked(settings.getLanguage() == Language.CYRILLIC);
     }
 
     public void onClickSaveSettings(View view) {

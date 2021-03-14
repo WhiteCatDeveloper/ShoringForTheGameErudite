@@ -20,6 +20,17 @@
     <string name="current_result">Текущие результаты:</string>
     <string name="next_turn">Следующий ход</string>
     <string name="to_end_game">Завершить игру</string>
+    <string name="use_alphabet">Использовать алфавит:</string>
+    <string name="alphabet_cyrillic">киррилица</string>
+    <string name="set_color_background">Цвет фона:</string>
+    <string name="BLACK">ЧЕРНЫЙ</string>
+    <string name="WHITE">БЕЛЫЙ</string>
+    <string name="YELLOW">ЖЕЛТЫЙ</string>
+    <string name="ORANGE">ОРАНЖЕВЫЙ</string>
+    <string name="GREEN">ЗЕЛЕНЫЙ</string>
+    <string name="BLUE">СИНИЙ</string>
+    <string name="button_save">СОХРАНИТЬ</string>
+    <string name="button_to_menu">В МЕНЮ</string>
 
     <string-array name="select_multipliers">
         <item>X1</item>
