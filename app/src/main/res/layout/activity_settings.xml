@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_margin="8dp"
             android:text="@string/use_alphabet"
             android:textSize="24sp"
             android:textStyle="bold"/>
@@ -31,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/alphabet_cyrillic"
+            android:layout_margin="8dp"
             android:textSize="24sp" />
 
         <TextView
@@ -38,18 +40,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/set_color_background"
+            android:layout_margin="8dp"
             android:gravity="center"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_margin="8dp" >
 
             <RadioButton
                 android:id="@+id/radioButtonBlack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorBlack"
                 android:textColor="@color/colorWhite"
                 android:text="@string/BLACK" />
@@ -58,6 +63,7 @@
                 android:id="@+id/radioButtonWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorWhite"
                 android:text="@string/WHITE" />
 
@@ -65,6 +71,7 @@
                 android:id="@+id/radioButtonYellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorYellow"
                 android:text="@string/YELLOW" />
 
@@ -72,6 +79,7 @@
                 android:id="@+id/radioButtonOrange"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorOrange"
                 android:text="@string/ORANGE" />
 
@@ -79,6 +87,7 @@
                 android:id="@+id/radioButtonGreen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorGreen"
                 android:text="@string/GREEN" />
 
@@ -86,6 +95,7 @@
                 android:id="@+id/radioButtonBlue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorBlue"
                 android:text="@string/BLUE" />
 
@@ -93,6 +103,7 @@
                 android:id="@+id/buttonSaveSettings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorYellow"
                 android:onClick="onClickSaveSettings"
                 android:text="@string/button_save" />
@@ -101,6 +112,7 @@
                 android:id="@+id/buttonToMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:background="@color/colorRed"
                 android:onClick="onClickToMain"
                 android:text="@string/button_to_menu" />
