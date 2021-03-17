@@ -4,12 +4,14 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Switch;
 
 import com.whitecatdeveloper.scoringforthegameerudite.R;
+import com.whitecatdeveloper.scoringforthegameerudite.database.SettingsDBHelper;
 import com.whitecatdeveloper.scoringforthegameerudite.model.Language;
 import com.whitecatdeveloper.scoringforthegameerudite.model.MyBackgroundColors;
 import com.whitecatdeveloper.scoringforthegameerudite.model.Settings;
@@ -17,6 +19,7 @@ import com.whitecatdeveloper.scoringforthegameerudite.model.Settings;
 public class SettingsActivity extends AppCompatActivity {
 
     private Settings settings;
+    private SettingsDBHelper dbHelper;
 
     private Switch switchLanguage;
     private RadioButton radioButtonBlack;
@@ -33,6 +36,7 @@ public class SettingsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) actionBar.hide();
         settings = Settings.getInstance();
+        dbHelper = new SettingsDBHelper(this);
         switchLanguage = findViewById(R.id.switchLanguage);
         radioButtonBlack = findViewById(R.id.radioButtonBlack);
         radioButtonWhite = findViewById(R.id.radioButtonWhite);
@@ -80,7 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void saveSettings () {
-
+        SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
     }
 
 
