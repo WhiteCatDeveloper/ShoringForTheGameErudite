@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class SettingsDBHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "settings.db";
+    public static final String DB_NAME = "settings.db";
     private static final int DB_VERSION = 1;
 
 
@@ -25,4 +25,6 @@ public class SettingsDBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(SettingsContract.SettingsEntry.DROP_COMMAND);
         onCreate(sqLiteDatabase);
     }
+
+
 }

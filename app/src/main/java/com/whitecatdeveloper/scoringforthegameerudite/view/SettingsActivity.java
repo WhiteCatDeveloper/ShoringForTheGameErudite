@@ -3,6 +3,7 @@ package com.whitecatdeveloper.scoringforthegameerudite.view;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.Switch;
 
 import com.whitecatdeveloper.scoringforthegameerudite.R;
+import com.whitecatdeveloper.scoringforthegameerudite.database.SettingsContract;
 import com.whitecatdeveloper.scoringforthegameerudite.database.SettingsDBHelper;
 import com.whitecatdeveloper.scoringforthegameerudite.model.Language;
 import com.whitecatdeveloper.scoringforthegameerudite.model.MyBackgroundColors;
@@ -28,6 +30,9 @@ public class SettingsActivity extends AppCompatActivity {
     private RadioButton radioButtonOrange;
     private RadioButton radioButtonGreen;
     private RadioButton radioButtonBlue;
+
+    private String lang = String.valueOf(Language.CYRILLIC);
+    private String bColors = String.valueOf(MyBackgroundColors.GREEN);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +90,10 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void saveSettings () {
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(SettingsContract.SettingsEntry.COLUMN_LANGUAGE, lang);
+        contentValues.put(SettingsContract.SettingsEntry.COLUMN_BACKGROUND_COLORS, bColors);
+        sqLiteDatabase.insert(SettingsDBHelper.DB_NAME, null, contentValues);
     }
 
 

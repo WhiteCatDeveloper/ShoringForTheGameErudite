@@ -14,7 +14,7 @@ public class SettingsContract {
 
         public static final String CREATE_COMMAND = "CREATE TABLE IF NOT EXISTS "  + TABLE_NAME +
                 "(" + _ID + " " + TYPE_INTEGER + " PRIMARY KEY AUTOINCREMENT, " + COLUMN_LANGUAGE +
-                " " + TYPE_TEXT + COLUMN_BACKGROUND_COLORS + " " + TYPE_TEXT + ")";
+                " " + TYPE_TEXT + ", " + COLUMN_BACKGROUND_COLORS + " " + TYPE_TEXT + ")";
 
 
         public static final String DROP_COMMAND = "DROP TABLE IF EXISTS " + TABLE_NAME;
