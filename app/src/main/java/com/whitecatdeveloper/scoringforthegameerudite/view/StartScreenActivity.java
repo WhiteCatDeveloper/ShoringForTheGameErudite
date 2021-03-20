@@ -22,17 +22,20 @@ public class StartScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
+        settings = Settings.getInstance();
         initDataBase();
         next();
 
     }
 
+
+    // нужно вынести в отдельный поток
     private void initDataBase () {
         SettingsDBHelper dbHelper = new SettingsDBHelper(this);
         SQLiteDatabase database = dbHelper.getReadableDatabase();
         Cursor cursor = database.query(SettingsDBHelper.DB_NAME, null, null, null, null, null, null);
-        String language = null;
-        String color = null;
+        String language;
+        String color;
         if (cursor.moveToFirst()) {
             language = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_LANGUAGE));
             color = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_BACKGROUND_COLORS));
@@ -40,7 +43,21 @@ public class StartScreenActivity extends AppCompatActivity {
             language = String.valueOf(Language.CYRILLIC);
             color = String.valueOf(MyBackgroundColors.GREEN);
         }
+        cursor.close();
+        if (language.equals(String.valueOf(Language.CYRILLIC))) settings.setLanguage(Language.CYRILLIC);
+        else settings.setLanguage(Language.LATIN);
 
+        if (color.equals(String.valueOf(MyBackgroundColors.BLACK ))) {
+            settings.setColors(MyBackgroundColors.BLACK);
+        } else if (color.equals(String.valueOf(MyBackgroundColors.BLUE))) {
+            settings.setColors(MyBackgroundColors.BLUE);
+        } else if (color.equals(String.valueOf(MyBackgroundColors.ORANGE))) {
+            settings.setColors(MyBackgroundColors.ORANGE);
+        } else if (color.equals(String.valueOf(MyBackgroundColors.YELLOW))) {
+            settings.setColors(MyBackgroundColors.YELLOW);
+        } else if (color.equals(String.valueOf(MyBackgroundColors.WHITE))) {
+            settings.setColors(MyBackgroundColors.WHITE);
+        } else settings.setColors(MyBackgroundColors.GREEN);
     }
 
     private void next () {
