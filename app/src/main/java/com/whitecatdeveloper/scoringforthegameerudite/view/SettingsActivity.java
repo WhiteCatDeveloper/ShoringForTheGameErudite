@@ -49,8 +49,8 @@ public class SettingsActivity extends AppCompatActivity {
         radioButtonOrange = findViewById(R.id.radioButtonOrange);
         radioButtonGreen = findViewById(R.id.radioButtonGreen);
         radioButtonBlue = findViewById(R.id.radioButtonBlue);
-//        getRadioButtonColor();
-//        getLanguage();
+        getRadioButtonColor();
+        getLanguage();
     }
 
     private void getRadioButtonColor() {

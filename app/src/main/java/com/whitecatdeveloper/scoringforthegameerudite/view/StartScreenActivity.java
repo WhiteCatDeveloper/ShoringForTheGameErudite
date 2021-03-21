@@ -33,19 +33,21 @@ public class StartScreenActivity extends AppCompatActivity {
     private void initDataBase () {
         SettingsDBHelper dbHelper = new SettingsDBHelper(this);
         SQLiteDatabase database = dbHelper.getReadableDatabase();
-        Cursor cursor = database.query(SettingsDBHelper.DB_NAME, null, null, null, null, null, null);
-        String language;
-        String color;
-        if (cursor.moveToFirst()) {
-            language = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_LANGUAGE));
-            color = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_BACKGROUND_COLORS));
+        String language = null;
+        String color = null;
+        if (database != null) {
+            Cursor cursor = database.query(SettingsDBHelper.DB_NAME, null, null, null, null, null, null);
+            if (cursor.moveToFirst()) {
+                language = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_LANGUAGE));
+                color = cursor.getString(cursor.getColumnIndex(SettingsContract.SettingsEntry.COLUMN_BACKGROUND_COLORS));
+            }
+            cursor.close();
         } else {
             language = String.valueOf(Language.CYRILLIC);
             color = String.valueOf(MyBackgroundColors.GREEN);
         }
-        cursor.close();
-        if (language.equals(String.valueOf(Language.CYRILLIC))) settings.setLanguage(Language.CYRILLIC);
-        else settings.setLanguage(Language.LATIN);
+        if (language.equals(String.valueOf(Language.LATIN))) settings.setLanguage(Language.LATIN);
+        else settings.setLanguage(Language.CYRILLIC);
 
         if (color.equals(String.valueOf(MyBackgroundColors.BLACK ))) {
             settings.setColors(MyBackgroundColors.BLACK);
